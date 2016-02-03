@@ -226,5 +226,5 @@ function tweetImages(tweets) {
 }
 
 tweet();
-//setInterval(tweet,1000*60*10);
+setInterval(tweet,1000*60*60*8);
 

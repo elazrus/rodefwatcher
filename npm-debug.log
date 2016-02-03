@@ -1,0 +1,222 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'canvas' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 warn package.json rodefwatcher@1.0.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'canvas@~1.3.9', null ]
+7 verbose cache add name=undefined spec="canvas@~1.3.9" args=["canvas@~1.3.9",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'canvas@~1.3.9',
+8 verbose parsed url   path: 'canvas@~1.3.9',
+8 verbose parsed url   href: 'canvas@~1.3.9' }
+9 verbose cache add name="canvas" spec="~1.3.9" args=["canvas","~1.3.9"]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: '~1.3.9',
+10 verbose parsed url   path: '~1.3.9',
+10 verbose parsed url   href: '~1.3.9' }
+11 verbose addNamed [ 'canvas', '~1.3.9' ]
+12 verbose addNamed [ null, '>=1.3.9-0 <1.4.0-0' ]
+13 silly lockFile 5e01025e-canvas-1-3-9 canvas@~1.3.9
+14 verbose lock canvas@~1.3.9 /home/erica/.npm/5e01025e-canvas-1-3-9.lock
+15 silly addNameRange { name: 'canvas', range: '>=1.3.9-0 <1.4.0-0', hasData: false }
+16 verbose url raw canvas
+17 verbose url resolving [ 'https://registry.npmjs.org/', './canvas' ]
+18 verbose url resolved https://registry.npmjs.org/canvas
+19 info trying registry request attempt 1 at 01:42:33
+20 verbose etag "6QCBX78UTU2QHOIWHFEN9KYUV"
+21 http GET https://registry.npmjs.org/canvas
+22 http 304 https://registry.npmjs.org/canvas
+23 silly registry.get cb [ 304,
+23 silly registry.get   { date: 'Wed, 03 Feb 2016 06:42:37 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=300',
+23 silly registry.get     etag: '"6QCBX78UTU2QHOIWHFEN9KYUV"',
+23 silly registry.get     age: '69',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-atl6222-ATL',
+23 silly registry.get     'x-cache': 'HIT',
+23 silly registry.get     'x-cache-hits': '1',
+23 silly registry.get     'x-timer': 'S1454481757.402200,VS0,VE0',
+23 silly registry.get     vary: 'Accept' } ]
+24 verbose etag canvas from cache
+25 silly addNameRange number 2 { name: 'canvas', range: '>=1.3.9-0 <1.4.0-0', hasData: true }
+26 silly addNameRange versions [ 'canvas',
+26 silly addNameRange   [ '0.0.1',
+26 silly addNameRange     '0.0.2',
+26 silly addNameRange     '0.0.3',
+26 silly addNameRange     '0.0.4',
+26 silly addNameRange     '0.0.5',
+26 silly addNameRange     '0.0.6',
+26 silly addNameRange     '0.0.7',
+26 silly addNameRange     '0.0.8',
+26 silly addNameRange     '0.1.0',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.2.1',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.3.1',
+26 silly addNameRange     '0.3.2',
+26 silly addNameRange     '0.3.3',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.4.1',
+26 silly addNameRange     '0.4.2',
+26 silly addNameRange     '0.4.3',
+26 silly addNameRange     '0.5.0',
+26 silly addNameRange     '0.5.1',
+26 silly addNameRange     '0.5.2',
+26 silly addNameRange     '0.5.3',
+26 silly addNameRange     '0.5.4',
+26 silly addNameRange     '0.6.0',
+26 silly addNameRange     '0.7.0',
+26 silly addNameRange     '0.7.1',
+26 silly addNameRange     '0.7.2',
+26 silly addNameRange     '0.7.3',
+26 silly addNameRange     '0.8.0',
+26 silly addNameRange     '0.8.1',
+26 silly addNameRange     '0.8.2',
+26 silly addNameRange     '0.8.3',
+26 silly addNameRange     '0.9.0',
+26 silly addNameRange     '0.10.0',
+26 silly addNameRange     '0.10.1',
+26 silly addNameRange     '0.10.2',
+26 silly addNameRange     '0.10.3',
+26 silly addNameRange     '0.11.0',
+26 silly addNameRange     '0.11.1',
+26 silly addNameRange     '0.11.2',
+26 silly addNameRange     '0.11.3',
+26 silly addNameRange     '0.12.0',
+26 silly addNameRange     '0.12.1',
+26 silly addNameRange     '0.13.0',
+26 silly addNameRange     '0.13.1',
+26 silly addNameRange     '1.0.0',
+26 silly addNameRange     '1.0.1',
+26 silly addNameRange     '1.0.2',
+26 silly addNameRange     '1.0.3',
+26 silly addNameRange     '1.0.4',
+26 silly addNameRange     '1.1.0',
+26 silly addNameRange     '1.1.1',
+26 silly addNameRange     '1.1.2',
+26 silly addNameRange     '1.1.3',
+26 silly addNameRange     '1.1.4',
+26 silly addNameRange     '1.1.5',
+26 silly addNameRange     '1.1.6',
+26 silly addNameRange     '1.2.0',
+26 silly addNameRange     '1.2.1',
+26 silly addNameRange     '1.2.2',
+26 silly addNameRange     '1.2.3',
+26 silly addNameRange     '1.2.4',
+26 silly addNameRange     '1.2.5',
+26 silly addNameRange     '1.2.6',
+26 silly addNameRange     '1.2.7',
+26 silly addNameRange     '1.2.8',
+26 silly addNameRange     '1.2.9',
+26 silly addNameRange     '1.2.10',
+26 silly addNameRange     '1.2.11',
+26 silly addNameRange     '1.3.0',
+26 silly addNameRange     '1.3.1',
+26 silly addNameRange     '1.3.2',
+26 silly addNameRange     '1.3.3',
+26 silly addNameRange     '1.3.4',
+26 silly addNameRange     '1.3.5',
+26 silly addNameRange     '1.3.6',
+26 silly addNameRange     '1.3.7',
+26 silly addNameRange     '1.3.8',
+26 silly addNameRange     '1.3.9' ] ]
+27 verbose addNamed [ 'canvas', '1.3.9' ]
+28 verbose addNamed [ '1.3.9', '1.3.9' ]
+29 silly lockFile d07e6e37-canvas-1-3-9 canvas@1.3.9
+30 verbose lock canvas@1.3.9 /home/erica/.npm/d07e6e37-canvas-1-3-9.lock
+31 silly lockFile d07e6e37-canvas-1-3-9 canvas@1.3.9
+32 silly lockFile d07e6e37-canvas-1-3-9 canvas@1.3.9
+33 silly lockFile 5e01025e-canvas-1-3-9 canvas@~1.3.9
+34 silly lockFile 5e01025e-canvas-1-3-9 canvas@~1.3.9
+35 silly resolved [ { name: 'canvas',
+35 silly resolved     description: 'Canvas graphics API backed by Cairo',
+35 silly resolved     version: '1.3.9',
+35 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+35 silly resolved     contributors: [ [Object], [Object], [Object] ],
+35 silly resolved     keywords:
+35 silly resolved      [ 'canvas',
+35 silly resolved        'graphic',
+35 silly resolved        'graphics',
+35 silly resolved        'pixman',
+35 silly resolved        'cairo',
+35 silly resolved        'image',
+35 silly resolved        'images',
+35 silly resolved        'pdf' ],
+35 silly resolved     homepage: 'https://github.com/Automattic/node-canvas',
+35 silly resolved     repository:
+35 silly resolved      { type: 'git',
+35 silly resolved        url: 'git://github.com/Automattic/node-canvas.git' },
+35 silly resolved     scripts:
+35 silly resolved      { prebenchmark: 'node-gyp build',
+35 silly resolved        benchmark: 'node benchmarks/run.js',
+35 silly resolved        pretest: 'node-gyp build',
+35 silly resolved        test: 'mocha test/*.test.js',
+35 silly resolved        'pretest-server': 'node-gyp build',
+35 silly resolved        'test-server': 'node test/server.js',
+35 silly resolved        install: 'node-gyp rebuild' },
+35 silly resolved     dependencies: { nan: '^2.1.0' },
+35 silly resolved     devDependencies:
+35 silly resolved      { 'body-parser': '^1.13.3',
+35 silly resolved        express: '^4.13.2',
+35 silly resolved        jade: '^1.11.0',
+35 silly resolved        mocha: '*' },
+35 silly resolved     engines: { node: '>=0.8.0' },
+35 silly resolved     main: './lib/canvas.js',
+35 silly resolved     license: 'MIT',
+35 silly resolved     gypfile: true,
+35 silly resolved     readme: 'node-canvas\n===========\n### Canvas graphics API backed by Cairo\n[![Build Status](https://travis-ci.org/Automattic/node-canvas.svg?branch=master)](https://travis-ci.org/Automattic/node-canvas)\n[![NPM version](https://badge.fury.io/js/canvas.svg)](http://badge.fury.io/js/canvas)\n\n  node-canvas is a [Cairo](http://cairographics.org/) backed Canvas implementation for [NodeJS](http://nodejs.org).\n\n## Authors\n\n  - TJ Holowaychuk ([tj](http://github.com/tj))\n  - Nathan Rajlich ([TooTallNate](http://github.com/TooTallNate))\n  - Rod Vagg ([rvagg](http://github.com/rvagg))\n  - Juriy Zaytsev ([kangax](http://github.com/kangax))\n\n## Installation\n\n```bash\n$ npm install canvas\n```\n\nUnless previously installed you\'ll _need_ __Cairo__. For system-specific installation view the [Wiki](https://github.com/Automattic/node-canvas/wiki/_pages).\n\nYou can quickly install the dependencies by using the command for your OS:\n\nOS | Command\n----- | -----\nOS X | `brew install pkg-config cairo libpng jpeg giflib`\nUbuntu | `sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++`\nFedora | `sudo yum install cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel`\nSolaris | `pkgin install cairo pkg-config xproto renderproto kbproto xextproto`\nWindows | [Instructions on our wiki](https://github.com/Automattic/node-canvas/wiki/Installation---Windows)\n\n**El Capitan users:** If you have recently updated to El Capitan and are experiencing trouble when compiling, run the following command: `xcode-select --install`. Read more about the problem [on Stack Overflow](http://stackoverflow.com/a/32929012/148072).\n\n## Screencasts\n\n  - [Introduction](http://screenr.com/CTk)\n\n## Example\n\n```javascript\nvar Canvas = require(\'canvas\')\n  , Image = Canvas.Image\n  , canvas = new Canvas(200, 200)\n  , ctx = canvas.getContext(\'2d\');\n\nctx.font = \'30px Impact\';\nctx.rotate(.1);\nctx.fillText("Awesome!", 50, 100);\n\nvar te = ctx.measureText(\'Awesome!\');\nctx.strokeStyle = \'rgba(0,0,0,0.5)\';\nctx.beginPath();\nctx.lineTo(50, 102);\nctx.lineTo(50 + te.width, 102);\nctx.stroke();\n\nconsole.log(\'<img src="\' + canvas.toDataURL() + \'" />\');\n```\n\n## Non-Standard API\n\n node-canvas extends the canvas API to provide interfacing with node, for example streaming PNG data, converting to a `Buffer` instance, etc. Among the interfacing API, in some cases the drawing API has been extended for SSJS image manipulation / creation usage, however keep in mind these additions may fail to render properly within browsers.\n\n### Image#src=Buffer\n\n node-canvas adds `Image#src=Buffer` support, allowing you to read images from disc, redis, etc and apply them via `ctx.drawImage()`. Below we draw scaled down squid png by reading it from the disk with node\'s I/O.\n\n```javascript\nfs.readFile(__dirname + \'/images/squid.png\', function(err, squid){\n  if (err) throw err;\n  img = new Image;\n  img.src = squid;\n  ctx.drawImage(img, 0, 0, img.width / 4, img.height / 4);\n});\n```\n\n Below is an example of a canvas drawing it-self as the source several time:\n\n```javascript\nvar img = new Image;\nimg.src = canvas.toBuffer();\nctx.drawImage(img, 0, 0, 50, 50);\nctx.drawImage(img, 50, 0, 50, 50);\nctx.drawImage(img, 100, 0, 50, 50);\n```\n\n### Image#dataMode\n\nnode-canvas adds `Image#dataMode` support, which can be used to opt-in to mime data tracking of images (currently only JPEGs).\n\nWhen mime data is tracked, in PDF mode JPEGs can be embedded directly into the output, rather than being re-encoded into PNG. This can drastically reduce filesize, and speed up rendering.\n\n```javascript\nvar img = new Image;\nimg.dataMode = Image.MODE_IMAGE; // Only image data tracked\nimg.dataMode = Image.MODE_MIME; // Only mime data tracked\nimg.dataMode = Image.MODE_MIME | Image.MODE_IMAGE; // Both are tracked\n```\n\nIf image data is not tracked, and the Image is drawn to an image rather than a PDF canvas, the output will be junk. Enabling mime data tracking has no benefits (only a slow down) unless you are generating a PDF.\n\n### Canvas#pngStream()\n\n  To create a `PNGStream` simply call `canvas.pngStream()`, and the stream will start to emit _data_ events, finally emitting _end_ when finished. If an exception occurs the _error_ event is emitted.\n\n```javascript\nvar fs = require(\'fs\')\n  , out = fs.createWriteStream(__dirname + \'/text.png\')\n  , stream = canvas.pngStream();\n\nstream.on(\'data\', function(chunk){\n  out.write(chunk);\n});\n\nstream.on(\'end\', function(){\n  console.log(\'saved png\');\n});\n```\n\nCurrently _only_ sync streaming is supported, however we plan on supporting async streaming as well (of course :) ). Until then the `Canvas#toBuffer(callback)` alternative is async utilizing `eio_custom()`.\n\n### Canvas#jpegStream() and Canvas#syncJPEGStream()\n\nYou can likewise create a `JPEGStream` by calling `canvas.jpegStream()` with\nsome optional parameters; functionality is otherwise identical to\n`pngStream()`. See `examples/crop.js` for an example.\n\n_Note: At the moment, `jpegStream()` is the same as `syncJPEGStream()`, both\nare synchronous_\n\n```javascript\nvar stream = canvas.jpegStream({\n    bufsize: 4096 // output buffer size in bytes, default: 4096\n  , quality: 75 // JPEG quality (0-100) default: 75\n  , progressive: false // true for progressive compression, default: false\n});\n```\n\n### Canvas#toBuffer()\n\nA call to `Canvas#toBuffer()` will return a node `Buffer` instance containing all of the PNG data.\n\n```javascript\ncanvas.toBuffer();\n```\n\n### Canvas#toBuffer() async\n\nOptionally we may pass a callback function to `Canvas#toBuffer()`, and this process will be performed asynchronously, and will `callback(err, buf)`.\n\n```javascript\ncanvas.toBuffer(function(err, buf){\n\n});\n```\n\n### Canvas#toDataURL() sync and async\n\nThe following syntax patterns are supported:\n\n```javascript\nvar dataUrl = canvas.toDataURL(); // defaults to PNG\nvar dataUrl = canvas.toDataURL(\'image/png\');\ncanvas.toDataURL(function(err, png){ }); // defaults to PNG\ncanvas.toDataURL(\'image/png\', function(err, png){ });\ncanvas.toDataURL(\'image/jpeg\', function(err, jpeg){ }); // sync JPEG is not supported\ncanvas.toDataURL(\'image/jpeg\', {opts...}, function(err, jpeg){ }); // see Canvas#jpegStream for valid options\ncanvas.toDataURL(\'image/jpeg\', quality, function(err, jpeg){ }); // spec-following; quality from 0 to 1\n```\n\n### CanvasRenderingContext2d#patternQuality\n\nGiven one of the values below will alter pattern (gradients, images, etc) render quality, defaults to _good_.\n\n  - fast\n  - good\n  - best\n  - nearest\n  - bilinear\n\n### CanvasRenderingContext2d#textDrawingMode\n\nCan be either `path` or `glyph`. Using `glyph` is much faster than `path` for drawing, and when using a PDF context will embed the text natively, so will be selectable and lower filesize. The downside is that cairo does not have any subpixel precision for `glyph`, so this will be noticeably lower quality for text positioning in cases such as rotated text. Also, strokeText in `glyph` will act the same as fillText, except using the stroke style for the fill.\n\nDefaults to _path_.\n\nThis property is tracked as part of the canvas state in save/restore.\n\n### CanvasRenderingContext2d#filter\n\nLike `patternQuality`, but applies to transformations effecting more than just patterns. Defaults to _good_.\n\n  - fast\n  - good\n  - best\n  - nearest\n  - bilinear\n\n### Global Composite Operations\n\nIn addition to those specified and commonly implemented by browsers, the following have been added:\n\n  - multiply\n  - screen\n  - overlay\n  - hard-light\n  - soft-light\n  - hsl-hue\n  - hsl-saturation\n  - hsl-color\n  - hsl-luminosity\n\n## Anti-Aliasing\n\n Set anti-aliasing mode\n\n - default\n - none\n - gray\n - subpixel\n\n For example:\n\n```javascript\nctx.antialias = \'none\';\n```\n\n## PDF Support\n\n  Basic PDF support was added in 0.11.0. Make sure to install cairo with `--enable-pdf=yes` for the PDF backend. node-canvas must know that it is creating\n  a PDF on initialization, using the "pdf" string:\n\n```js\nvar canvas = new Canvas(200, 500, \'pdf\');\n```\n\n An additional method `.addPage()` is then available to create\n multiple page PDFs:\n\n```js\nctx.font = \'22px Helvetica\';\nctx.fillText(\'Hello World\', 50, 80);\nctx.addPage();\n\nctx.font = \'22px Helvetica\';\nctx.fillText(\'Hello World 2\', 50, 80);\nctx.addPage();\n\nctx.font = \'22px Helvetica\';\nctx.fillText(\'Hello World 3\', 50, 80);\nctx.addPage();\n```\n\n## SVG support\n\n Just like PDF support, make sure to install cairo with `--enable-svg=yes`.\n You also need to tell node-canvas that it is working on SVG upon its initialization:\n\n```js\nvar canvas = new Canvas(200, 500, \'svg\');\n// Use the normal primitives.\nfs.writeFile(\'out.svg\', canvas.toBuffer());\n```\n\n## Benchmarks\n\n Although node-canvas is extremely new, and we have not even begun optimization yet it is already quite fast. For benchmarks vs other node canvas implementations view this [gist](https://gist.github.com/664922), or update the submodules and run `$ make benchmark` yourself.\n\n## Contribute\n\n Want to contribute to node-canvas? patches for features, bug fixes, documentation, examples and others are certainly welcome. Take a look at the [issue queue](https://github.com/Automattic/node-canvas/issues) for existing issues.\n\n## Examples\n\n Examples are placed in _./examples_, be sure to check them out! most produce a png image of the same name, and others such as _live-clock.js_ launch an http server to be viewed in the browser.\n\n## Testing\n\nIf you have not previously, init git submodules:\n\n    $ git submodule update --init\n\nInstall the node modules:\n\n    $ npm install\n\nBuild node-canvas:\n\n    $ node-gyp rebuild\n\nUnit tests:\n\n    $ make test\n\nVisual tests:\n\n    $ make test-server\n\n## Versions\n\nTested with and designed for:\n\n  - node 0.4.2\n  - cairo 1.8.6\n\nFor node 0.2.x `node-canvas` <= 0.4.3 may be used,\n0.5.0 and above are designed for node 0.4.x only.\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2010 LearnBoost, and contributors &lt;dev@learnboost.com&gt;\n\nCopyright (c) 2014 Automattic, Inc and contributors &lt;dev@automattic.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+35 silly resolved     readmeFilename: 'Readme.md',
+35 silly resolved     bugs: { url: 'https://github.com/Automattic/node-canvas/issues' },
+35 silly resolved     _id: 'canvas@1.3.9',
+35 silly resolved     _from: 'canvas@~1.3.9' } ]
+36 info install canvas@1.3.9 into /home/erica/Documents/rodefwatcher
+37 info installOne canvas@1.3.9
+38 info /home/erica/Documents/rodefwatcher/node_modules/canvas unbuild
+39 info preuninstall canvas@1.3.9
+40 info uninstall canvas@1.3.9
+41 verbose true,/home/erica/Documents/rodefwatcher/node_modules,/home/erica/Documents/rodefwatcher/node_modules unbuild canvas@1.3.9
+42 info postuninstall canvas@1.3.9
+43 info /home/erica/Documents/rodefwatcher/node_modules/canvas unbuild
+44 error error rolling back Error: EACCES, unlink '/home/erica/Documents/rodefwatcher/node_modules/canvas/build/Makefile'
+44 error error rolling back  canvas@1.3.9 { [Error: EACCES, unlink '/home/erica/Documents/rodefwatcher/node_modules/canvas/build/Makefile']
+44 error error rolling back   errno: 3,
+44 error error rolling back   code: 'EACCES',
+44 error error rolling back   path: '/home/erica/Documents/rodefwatcher/node_modules/canvas/build/Makefile' }
+45 error Error: EACCES, unlink '/home/erica/Documents/rodefwatcher/node_modules/canvas/build/Makefile'
+45 error  { [Error: EACCES, unlink '/home/erica/Documents/rodefwatcher/node_modules/canvas/build/Makefile']
+45 error   errno: 3,
+45 error   code: 'EACCES',
+45 error   path: '/home/erica/Documents/rodefwatcher/node_modules/canvas/build/Makefile' }
+46 error Please try running this command again as root/Administrator.
+47 error System Linux 3.19.0-47-generic
+48 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "--save" "canvas"
+49 error cwd /home/erica/Documents/rodefwatcher
+50 error node -v v0.10.25
+51 error npm -v 1.3.10
+52 error path /home/erica/Documents/rodefwatcher/node_modules/canvas/build/Makefile
+53 error code EACCES
+54 error errno 3
+55 error stack Error: EACCES, unlink '/home/erica/Documents/rodefwatcher/node_modules/canvas/build/Makefile'
+56 verbose exit [ 3, true ]
