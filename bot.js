@@ -229,6 +229,8 @@ function tweetImages(tweets) {
       }
     
       T.post('media/upload', media, uploaded);
+      console.log(tweeted_array);
+      console.log(tweeted2_array);
     });
   });
 }
