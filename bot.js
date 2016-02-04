@@ -20,6 +20,8 @@ var sign_coords = [[135,167], [160,110], [105,218], [48,154], [700,1170], [65,13
 
 var tweeted_fn = "tweetedDates.txt";
 var tweeted2_fn = "tweetedOffDates.txt";
+var tweeted_array = []
+var tweeted2_array = []
 
 function tweet() {
   // parse webpage - code help from DigitalOcean (www.digitalocean.com/community/tutorials/how-to-use-nodejs-request-and-cheerio-to-set-up-simple-web-scraping)
@@ -65,6 +67,7 @@ function tweet() {
         if (!exists) {
           fs.writeFile(tweeted_fn, dates[0] + '', function(err) {
             fs.writeFile(tweeted2_fn, '', function(err) {
+              tweeted_array.push(dates[0]);
               var tweet = dates[0] + ": 0 days since last Palestinian terrorist attack in Israel.";
               tweetImages([tweet]);
             });
@@ -77,12 +80,14 @@ function tweet() {
           
             fs.readFile(tweeted2_fn, 'utf8', function(err2, data2) {
           
-              var tweeted_dates = data.split('\n');
+              //var tweeted_dates = data.split('\n');
+              var tweeted_dates = tweeted_array;
               var last_date = new Date(tweeted_dates[tweeted_dates.length-1]);
             
               var tweeted_offdates, last_offdate;
               if (data2.length > 0) {
-                tweeted_offdates = data2.split('\n');
+                //tweeted_offdates = data2.split('\n');
+                tweeted_offdates = tweeted2_array;
                 last_offdate = new Date(tweeted_offdates[tweeted_offdates.length-1]);
               }
           
@@ -114,6 +119,7 @@ function tweet() {
                     data2 += prev_date.toDateString();
                 
                     fs.writeFile(tweeted2_fn, data2 + '', function(err) {
+                      tweeted2_array.push(prev_date.toDateString());
                       var oneDay = 1000 * 60 * 60 * 24;
                       var utc1 = Date.UTC(last_date.getFullYear(), last_date.getMonth(), last_date.getDate());
                       var utc2 = Date.UTC(prev_date.getFullYear(), prev_date.getMonth(), prev_date.getDate());
@@ -128,6 +134,7 @@ function tweet() {
                   data += '\n' + new_date;
  
                   fs.writeFile(tweeted_fn, data + '', function(err) {
+                    tweeted_array.push(new_date);
                     tweets.push(new_date + ": 0 days since last Palestinian terrorist attack in Israel.");
                     tweetImages(tweets);
                   });
@@ -146,6 +153,7 @@ function tweet() {
                     data2 += today_date.toDateString();
 
                     fs.writeFile(tweeted2_fn, data2 + '', function(err) {
+                      tweeted2_array.push(today_date.toDateString());
                       var oneDay = 1000 * 60 * 60 * 24;
                       var utc1 = Date.UTC(last_date.getFullYear(), last_date.getMonth(), last_date.getDate());
                       var utc2 = Date.UTC(today_date.getFullYear(), today_date.getMonth(), today_date.getDate());
@@ -226,5 +234,5 @@ function tweetImages(tweets) {
 }
 
 tweet();
-setInterval(tweet,1000*60*60*8);
+setInterval(tweet,1000*60*3);
 
