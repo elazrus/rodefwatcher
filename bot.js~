@@ -22,7 +22,8 @@ var sign_coords = [[135,167], [160,110], [105,218], [48,154], [700,1170], [65,13
 var tweeted_ln = "tweeted dates";
 var tweeted2_ln = "tweeted offdates";
 
-//var client;
+var client;
+//connect();
 //setInterval(connect,1000*60*3);
 
 //function connect() {
@@ -192,9 +193,9 @@ function runTweets() {
     });
   }
 
-  //clean();
-  tweet();
-  setInterval(tweet,1000*59*1);
+  clean();
+  //tweet();
+  //setInterval(tweet,1000*59*1);
 }
 
 // tweet with image - code help from Dan Shiffman
