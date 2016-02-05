@@ -9,6 +9,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var Canvas = require('canvas');
 var redis = require('redis');
+var url = require('url');
 
 var T = new Twit(config);
 var cmd = 'processing-java --sketch=`pwd`/imageCreator --run';
@@ -20,12 +21,24 @@ var sign_coords = [[135,167], [160,110], [105,218], [48,154], [700,1170], [65,13
 
 var tweeted_ln = "tweeted dates";
 var tweeted2_ln = "tweeted offdates";
-var client = redis.createClient();
+
+var client;
+
+if (process.env.REDISTOGO_URL) {
+  console.log("connected");
+  var rtg = url.parse(process.env.REDISTOGO_URL);
+  client = client.createClient(rtg.port, rtg.hostname);
+  client.auth(rtg.auth.split(":")[1]);
+} 
+else {
+  console.log("not connected");
+  client = redis.createClient();
+}
 
 client.on("error", function (err) {
     console.log("Error " + err);
 });
- 
+
 client.on("connect", runTweets);
  
 function runTweets() {
