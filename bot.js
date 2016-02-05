@@ -23,22 +23,25 @@ var tweeted_ln = "tweeted dates";
 var tweeted2_ln = "tweeted offdates";
 
 var client;
+setInterval(connect,1000*60*3);
 
-if (process.env.REDISTOGO_URL) {
-  console.log("connected");
-  var rtg = url.parse(process.env.REDISTOGO_URL);
-  client = redis.createClient(rtg.port, rtg.hostname);
-  client.auth(rtg.auth.split(":")[1], runTweets);
-} 
-else {
-  console.log("not connected");
-  client = redis.createClient();
+function connect() {
+  if (process.env.REDISTOGO_URL) {
+    console.log("connected");
+    var rtg = url.parse(process.env.REDISTOGO_URL);
+    client = redis.createClient(rtg.port, rtg.hostname);
+    client.auth(rtg.auth.split(":")[1], runTweets);
+  } 
+  else {
+    console.log("not connected");
+    client = redis.createClient();
 
-  client.on("error", function (err) {
-    console.log("Error " + err);
-  });
+    client.on("error", function (err) {
+      console.log("Error " + err);
+    });
 
-  client.on("connect", runTweets);
+    client.on("connect", runTweets);
+  }
 }
  
 function runTweets() {
@@ -189,52 +192,9 @@ function runTweets() {
     });
   }
 
-  clean();
-  //tweet();
+  //clean();
+  tweet();
   //setInterval(tweet,1000*60*3);
-}
- 
-function tweet() {
-  // parse webpage - code help from DigitalOcean (www.digitalocean.com/community/tutorials/how-to-use-nodejs-request-and-cheerio-to-set-up-simple-web-scraping)
-  request(url, function(error, response, html) {
-    if (!error && response.statusCode == 200) {
-      var $ = cheerio.load(html);
-   
-      var dates = [];
-
-      $('p').each(function(i, element) {
-        var attack = $(this).text();
-      
-        var re = {
-          date: /((Jan)|(Feb)|(Mar)|(Apr)|(May)|(Jun)|(Jul)|(Aug)|(Sep)|(Oct)|(Nov)|(Dec))([A-Za-z]*)(\s+)([0-9])([0-9]{0,1})(,)(\s+)([0-9]{4})/
-        }
-      
-        if (re.date.test(attack)) {
-          var date = re.date.exec(attack)[0];
-          date = date.split(' ');
-          if   ((/Jan/).test(date[0])) date[0] =  1;
-          else if ((/Feb/).test(date[0])) date[0] =  2;
-          else if ((/Mar/).test(date[0])) date[0] =  3;
-          else if ((/Apr/).test(date[0])) date[0] =  4;
-          else if ((/May/).test(date[0])) date[0] =  5;
-          else if ((/Jun/).test(date[0])) date[0] =  6;
-          else if ((/Jul/).test(date[0])) date[0] =  7;
-          else if ((/Aug/).test(date[0])) date[0] =  8;
-          else if ((/Sep/).test(date[0])) date[0] =  9;
-          else if ((/Oct/).test(date[0])) date[0] = 10;
-          else if ((/Nov/).test(date[0])) date[0] = 11;
-          else if ((/Dec/).test(date[0])) date[0] = 12;
-          date[1] = date[1].replace(',', '');
-          date = new Date(Date.UTC(date[2], date[0], date[1], 0, 0, 0, 0));
-
-          dates.push(date.toDateString());
-        }
-        else {
-          console.log(error);
-        }
-      });
-    }
-  });
 }
 
 // tweet with image - code help from Dan Shiffman
@@ -290,6 +250,7 @@ function tweetImages(tweets) {
           }
         
           T.post('statuses/update', tweet, tweeted);
+          client.quit();
         }
       }
     

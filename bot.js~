@@ -189,9 +189,9 @@ function runTweets() {
     });
   }
 
-  //clean();
-  tweet();
-  setInterval(tweet,1000*60*3);
+  clean();
+  //tweet();
+  //setInterval(tweet,1000*60*3);
 }
  
 function tweet() {
