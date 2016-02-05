@@ -24,7 +24,7 @@ var tweeted2_ln = "tweeted offdates";
 
 var client;
 connect();
-setInterval(connect,1000*60*3);
+//setInterval(connect,1000*60*3);
 
 function connect() {
   if (process.env.REDISTOGO_URL) {
@@ -193,8 +193,8 @@ function runTweets() {
     });
   }
 
-  //clean();
-  tweet();
+  clean();
+  //tweet();
   //setInterval(tweet,1000*59*1);
 }
 
