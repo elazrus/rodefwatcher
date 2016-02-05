@@ -22,8 +22,8 @@ var sign_coords = [[135,167], [160,110], [105,218], [48,154], [700,1170], [65,13
 var tweeted_ln = "tweeted dates";
 var tweeted2_ln = "tweeted offdates";
 
-var client;
-setInterval(connect,1000*60*3);
+//var client;
+//setInterval(connect,1000*60*3);
 
 function connect() {
   if (process.env.REDISTOGO_URL) {
@@ -42,7 +42,7 @@ function connect() {
 
     client.on("connect", runTweets);
   }
-}
+//}
  
 function runTweets() {
 
@@ -194,7 +194,7 @@ function runTweets() {
 
   //clean();
   tweet();
-  //setInterval(tweet,1000*60*3);
+  setInterval(tweet,1000*59*1);
 }
 
 // tweet with image - code help from Dan Shiffman

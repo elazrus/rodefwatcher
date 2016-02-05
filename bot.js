@@ -25,7 +25,7 @@ var tweeted2_ln = "tweeted offdates";
 //var client;
 //setInterval(connect,1000*60*3);
 
-function connect() {
+//function connect() {
   if (process.env.REDISTOGO_URL) {
     console.log("connected");
     var rtg = url.parse(process.env.REDISTOGO_URL);
