@@ -28,18 +28,18 @@ if (process.env.REDISTOGO_URL) {
   console.log("connected");
   var rtg = url.parse(process.env.REDISTOGO_URL);
   client = client.createClient(rtg.port, rtg.hostname);
-  client.auth(rtg.auth.split(":")[1]);
+  client.auth(rtg.auth.split(":")[1], runTweets);
 } 
 else {
   console.log("not connected");
   client = redis.createClient();
-}
 
-client.on("error", function (err) {
+  client.on("error", function (err) {
     console.log("Error " + err);
-});
+  });
 
-client.on("connect", runTweets);
+  client.on("connect", runTweets);
+}
  
 function runTweets() {
 
