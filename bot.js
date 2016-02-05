@@ -193,8 +193,8 @@ function runTweets() {
     });
   }
 
-  clean();
-  //tweet();
+  //clean();
+  tweet();
   //setInterval(tweet,1000*59*1);
 }
 
