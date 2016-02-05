@@ -27,7 +27,7 @@ var client;
 if (process.env.REDISTOGO_URL) {
   console.log("connected");
   var rtg = url.parse(process.env.REDISTOGO_URL);
-  client = client.createClient(rtg.port, rtg.hostname);
+  client = redis.createClient(rtg.port, rtg.hostname);
   client.auth(rtg.auth.split(":")[1], runTweets);
 } 
 else {
