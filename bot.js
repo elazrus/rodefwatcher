@@ -177,7 +177,7 @@ function runTweets() {
   }
 
   //clean();
-  //tweet();
+  tweet();
   setInterval(tweet,1000*60*3);
 }
  
