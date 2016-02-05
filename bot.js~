@@ -250,7 +250,7 @@ function tweetImages(tweets) {
           }
         
           T.post('statuses/update', tweet, tweeted);
-          client.quit();
+          //client.quit();
         }
       }
     
