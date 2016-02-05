@@ -13,7 +13,7 @@ var url = require('url');
 
 var T = new Twit(config);
 var cmd = 'processing-java --sketch=`pwd`/imageCreator --run';
-var url = 'http://www.mfa.gov.il/mfa/foreignpolicy/terrorism/palestinian/pages/victims%20of%20palestinian%20violence%20and%20terrorism%20sinc.aspx';
+var site_url = 'http://www.mfa.gov.il/mfa/foreignpolicy/terrorism/palestinian/pages/victims%20of%20palestinian%20violence%20and%20terrorism%20sinc.aspx';
 
 var signs = ['1.jpg','2.png','3.jpg','4.jpeg','5.PNG','6.jpg','7.png'];
 var sign_fonts = ['24px Impact', '48px Impact', '32px Impact', '22px Impact', '124px Impact', '24px Impact', '96px Impact'];
@@ -45,7 +45,7 @@ function runTweets() {
 
   function tweet() {
     // parse webpage - code help from DigitalOcean (www.digitalocean.com/community/tutorials/how-to-use-nodejs-request-and-cheerio-to-set-up-simple-web-scraping)
-    request(url, function(error, response, html) {
+    request(site_url, function(error, response, html) {
       if (!error && response.statusCode == 200) {
         var $ = cheerio.load(html);
    
